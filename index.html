@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #app {
+        display: inline-block;
+        height: min-content;
+        font-size: 30px;
+      }
+    </style>
+    <!-- pre-render-loading抽出的css -->
+    <%= htmlWebpackPlugin.options.loading.css %>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- loading base64图 -->
+      <%= htmlWebpackPlugin.options.loading.html %>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </body>
+</html>
